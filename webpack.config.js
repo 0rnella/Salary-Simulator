@@ -3,7 +3,7 @@ const isDev = process.env.NODE_ENV === 'development'
 module.exports = {
   mode: isDev ? 'development' : 'production',
   entry: [
-    '@babel/polyfill', // enables async-await
+    '@babel/polyfill',
     './client/index.js'
   ],
   output: {
@@ -13,7 +13,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  devtool: 'source-map',
+  devtool: 'source-maps',
   watchOptions: {
     ignored: /node_modules/
   },
